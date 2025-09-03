@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Universitarios 2025 - Prof. Fred Torres Cruz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .course-card {
+            transition: all 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .slide-up {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards;
+        }
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="fade-in">
+                    <h1 class="text-3xl font-bold">Cursos Universitarios 2025</h1>
+                    <p class="text-blue-200 mt-1">Prof. Fred Torres Cruz</p>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-blue-200 transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#inicio" class="text-blue-200 hover:text-white transition-colors border-b-2 border-transparent hover:border-blue-300">
+                        <i class="fas fa-home mr-2"></i>Inicio
+                    </a>
+                    <button id="info-btn" class="text-blue-200 hover:text-white transition-colors border-b-2 border-transparent hover:border-blue-300">
+                        <i class="fas fa-info-circle mr-2"></i>Información
+                    </button>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col space-y-2">
+                    <a href="#inicio" class="text-blue-200 hover:text-white transition-colors py-2 px-4 border border-blue-600 hover:bg-blue-600">
+                        <i class="fas fa-home mr-2"></i>Inicio
+                    </a>
+                    <button id="info-btn-mobile" class="text-left text-blue-200 hover:text-white transition-colors py-2 px-4 border border-blue-600 hover:bg-blue-600">
+                        <i class="fas fa-info-circle mr-2"></i>Información
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Welcome Section -->
+        <section class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">Bienvenido al Portal Académico</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Este sitio contiene la información y recursos para los cursos del período académico 2025-II. 
+                Selecciona un curso para acceder a los contenidos, cronogramas y portafolios estudiantiles.
+            </p>
+        </section>
+
+        <!-- Courses Grid -->
+        <section id="courses-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- EST312 Course Card -->
+            <div class="course-card bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 slide-up" style="animation-delay: 0.2s">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
+                            312
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-slate-800">EST312</h3>
+                            <p class="text-slate-600 text-sm">Código de Curso</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4">Estadística Computacional</h4>
+                    
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Aplicación de métodos computacionales en el análisis estadístico. 
+                        Implementación de algoritmos y técnicas de simulación.
+                    </p>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-clock mr-1"></i>2025-II
+                        </span>
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-users mr-1"></i>Pregrado
+                        </span>
+                    </div>
+                    
+                    <a href="est312.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-6 font-semibold transition-colors">
+                        <i class="fas fa-arrow-right mr-2"></i>Acceder al Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- EST334 Course Card -->
+            <div class="course-card bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 slide-up" style="animation-delay: 0.4s">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold">
+                            334
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-slate-800">EST334</h3>
+                            <p class="text-slate-600 text-sm">Código de Curso</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4">Estadística Espacial</h4>
+                    
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Análisis de datos con componente espacial. Métodos geoestadísticos 
+                        y técnicas de modelado espacial.
+                    </p>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-clock mr-1"></i>2025-II
+                        </span>
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-users mr-1"></i>Pregrado
+                        </span>
+                    </div>
+                    
+                    <a href="est334.html" class="block w-full bg-blue-500 hover:bg-blue-600 text-white text-center py-3 px-6 font-semibold transition-colors">
+                        <i class="fas fa-arrow-right mr-2"></i>Acceder al Curso
+                    </a>
+                </div>
+            </div>
+
+            <!-- EST207 Course Card -->
+            <div class="course-card bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 slide-up" style="animation-delay: 0.6s">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-700 text-white flex items-center justify-center text-2xl font-bold">
+                            207
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-slate-800">EST207</h3>
+                            <p class="text-slate-600 text-sm">Código de Curso</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-2xl font-bold text-slate-800 mb-4">Programación Numérica</h4>
+                    
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Fundamentos de programación aplicados a métodos numéricos. 
+                        Algoritmos computacionales y análisis numérico.
+                    </p>
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-clock mr-1"></i>2025-II
+                        </span>
+                        <span class="text-sm text-slate-500 bg-slate-100 px-3 py-1 font-medium">
+                            <i class="fas fa-users mr-1"></i>Pregrado
+                        </span>
+                    </div>
+                    
+                    <a href="est207.html" class="block w-full bg-blue-700 hover:bg-blue-800 text-white text-center py-3 px-6 font-semibold transition-colors">
+                        <i class="fas fa-arrow-right mr-2"></i>Acceder al Curso
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center">
+                <p class="text-blue-200">© 2025 Prof. Fred Torres Cruz - Cursos Universitarios</p>
+                <p class="text-blue-300 text-sm mt-2">Sitio académico profesional para estudiantes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Teacher Information -->
+    <div id="info-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 max-w-md mx-4 shadow-2xl">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-slate-800">Información del Docente</h3>
+                <button id="close-modal" class="text-slate-500 hover:text-slate-800 text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-semibold text-slate-800 mb-2">Prof. Fred Torres Cruz</h4>
+                    <p class="text-slate-600">Docente de Estadística y Métodos Cuantitativos</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-slate-800 mb-2">Contacto Académico</h4>
+                    <p class="text-slate-600">A través del campus virtual o durante las horas de consulta</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-slate-800 mb-2">Período Académico</h4>
+                    <p class="text-slate-600">2025 - Segundo Semestre</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal functionality
+        const infoBtns = [document.getElementById('info-btn'), document.getElementById('info-btn-mobile')];
+        const modal = document.getElementById('info-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        infoBtns.forEach(btn => {
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            }
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+
+        // Smooth scrolling animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.slide-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
